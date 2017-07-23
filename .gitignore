@@ -1,0 +1,10 @@
+# General
+
+# Omitimos el directorio de vagrant
+.vagrant/
+
+# Omitimos el contenido del directorio practicas
+./practicas/*
+# Incluimos el archivo .gitkeep para tener el directorio practicas vacío en Git
+!./practicas/.gitkeep
+
