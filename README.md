@@ -63,6 +63,6 @@ Para eliminar la máquina virtual (se conservan los archivos de la carpeta `prac
 ## En Windows
 
 En el caso de Windows, Git for Windows incluye un cliente SSH (asegúrese que el archivo ssh.exe esté incluido en la variable de entorno PATH).
-Para que el comando SSH quede en el PATH, durante la instalación de Git en la pantalla que dice "Adjusting your PATH environment" seleccione la tercera opción "Use Git and optional Unix tools from the Windows Command Prompt".
+Para que el comando SSH quede en el PATH, durante la instalación de Git en la pantalla que dice *"Adjusting your PATH environment"* seleccione la tercera opción *"Use Git and optional Unix tools from the Windows Command Prompt"*.
 
 Si no está conforme con ese cliente, puede instalar [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
