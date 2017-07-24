@@ -14,9 +14,12 @@ echo "Actualizando lista de paquetes..."
 apt-get update > /dev/null
 
 echo "Ajustando locales e idioma..."
-# Ajusto el locale por default a es_ES
-locale-gen es_ES es_ES.UTF-8 > /dev/null
-update-locale LANG=es_ES.utf-8 > /dev/null
+# Ajusto el locale por default a es_AR
+apt-get install language-pack-es > /dev/null
+locale-gen es_ES es_AR es_AR.UTF-8 > /dev/null
+echo 'LANG=es_AR.utf-8' > /etc/default/locale
+echo 'LANGUAGE=es_AR.utf-8' >> /etc/default/locale
+dpkg-reconfigure locales > /dev/null
 
 echo "Instalando páginas man..."
 # Instalo manuales en español
@@ -27,7 +30,7 @@ apt-get install manpages-posix manpages-posix-dev manpages-dev > /dev/null
 echo "Instalando Herramientas Básicas..."
 # gpm para dar soporte al mouse en línea de comandos
 # htop: un comando top mejorado
-apt-get install gpm htop -y > /dev/null
+apt-get install gpm mc htop -y > /dev/null
 
 echo "Descargando FreePascal 2.4.0..."
 # Creamos un directorio para los archivos temporales
@@ -50,5 +53,8 @@ chown vagrant.vagrant /home/vagrant/fp.*
 
 # Forzamos el color en el prompt de la máquina virtual
 sed -i 's/#force_color_prompt/force_color_prompt/g' /home/vagrant/.bashrc
+
+# Actualizamos la base de datos de locate
+updatedb
 
 echo "Finalizadas las actividades de instalación y configuración!"
