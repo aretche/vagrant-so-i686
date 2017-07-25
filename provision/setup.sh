@@ -50,7 +50,7 @@ apt-get install gpm mc htop -y &> /dev/null
 
 echo "Eliminando paquetes innecesarios..."
 apt-get purge chef puppet -y > /dev/null
-apt-get autoremove > /dev/null
+apt-get autoremove -y > /dev/null
 
 echo "Descargando FreePascal 2.4.0..."
 # Creamos un directorio para los archivos temporales
