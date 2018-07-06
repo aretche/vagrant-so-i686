@@ -6,8 +6,8 @@ export DEBIAN_FRONTEND=noninteractive
 echo "Provisionando la máquina virtual..."
 
 #Cambiando el hostname a la VM...
-hostnamectl set-hostname so-2017
-sed -i 's/localhost/localhost so-2017/g' /etc/hosts
+hostnamectl set-hostname so-2018
+sed -i 's/localhost/localhost so-2018/g' /etc/hosts
 
 # Veo si ya existe un archivo de swap
 grep -q "swapfile" /etc/fstab

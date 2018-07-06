@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Configuración específica para el provider virtualbox
   config.vm.provider "virtualbox" do |v|
       # Seteamos el nombre de la máquina virtual
-      v.name = "S.O. 2017 (32 bits)"
+      v.name = "S.O. 2018 (32 bits)"
       # Cambiamos la memoria dedicada a la máquina virtual
       v.customize ["modifyvm", :id, "--memory", "256"]
       # Activamos el portapapeles entre el host y la máquina virtual
